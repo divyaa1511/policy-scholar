@@ -1,0 +1,228 @@
+/* index heading */
+
+.conthead {
+    display: inline-block;
+  }
+  
+  .conthead h1 {
+    display: inline-block;
+  
+    margin-left: 1em;
+    margin-top: 0.3em;
+    font-family: "Nunito Sans", sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 2em;
+  }
+  
+  /* index heading closed */
+  
+  .btn-2 a {
+  
+    font-size: 0.7em;
+    margin-right: 80%;
+    margin-left: 1%;
+    text-decoration: none;
+    color: white;
+    border: 1px solid #0f4638;
+    background-color: #144135;
+    padding: 0.4em;
+    border-radius: 10px;
+  }
+  
+  .mr-2 {
+    margin-left: 2%;
+    color: black;
+    display: block;
+    text-decoration: none;
+    font-size: 0.6em;
+    font-family: "Acme", sans-serif;
+  }
+  
+  .img-cont img {
+    width: 70%;
+    height: 50%;
+    margin-left: 13%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+  }
+  
+  .article-title {
+    display: block;
+    margin: 0% 8%;
+    font-weight: bold;
+    color: black;
+    font-size: 0.8em;
+    text-decoration: none;
+    text-align: justify;
+  }
+  
+  .article-content {
+    display: block;
+    margin: 0% 6%;
+    text-align: justify;
+    color: black;
+    text-decoration: none;
+    font-size: 0.7em;
+  }
+  
+  .content-section {
+    color: black;
+    font-size: 1.6em;
+    font-family: "Acme", sans-serif;
+  }
+   
+  .img-cont12 img{
+    width: 2.4em;
+    float: left;
+    margin-left: 6%;
+    border-radius: 10%;
+    height: 1.8em;
+  
+  }
+  
+  /* form page  */
+  
+  input[type="text"] {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-left: 2%;
+    font-size: 0.7em;
+  
+    box-sizing: border-box;
+    border: 2px solid rgb(216, 209, 219);
+    background-color: rgb(216, 209, 219);
+    font-family: "Acme", sans-serif;
+  }
+  
+  textarea {
+    width: 90%;
+    margin-left: 2%;
+    padding: 12px 20px;
+    font-size: 0.7em;
+    height: 250px;
+    box-sizing: border-box;
+    border: 2px solid rgb(216, 209, 219);
+    background-color: rgb(216, 209, 219);
+    font-family: "Acme", sans-serif;
+  }
+  
+  .control-label{
+    color: rgb(49, 46, 82);
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 4%;
+  }
+  .select{
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-left: 2%;
+    font-size: 0.7em;
+  
+    box-sizing: border-box;
+    border: 2px solid rgb(216, 209, 219);
+    background-color: rgb(216, 209, 219);
+    font-family: "Acme", sans-serif;
+  }
+  
+  
+  
+  /* form page close */
+  
+  /* delete page  */
+  
+  .del-post {
+    border: 2px solid white;
+    border-radius: 20px;
+    margin: 120px 90px;
+    text-align: center;
+    padding: 70px 0;
+    background-color: #f3f9fd;
+  }
+  
+  /* delete closed  */
+  
+  .index-title11 {
+    display: inline-flex;
+    width: 70%;
+    margin: 0% 2%;
+    font-weight: bold;
+    color: black;
+    font-size: 0.8em;
+    text-decoration: none;
+  }
+  
+  .index-content {
+    display: inline-flex;
+    width: 70%;
+    margin: 0% 2%;
+    color: black;
+    text-decoration: none;
+    font-size: 0.7em;
+  }
+  
+  .img-cont1 img {
+    margin: 0% 2%;
+    float: left;
+    display: inline-flex;
+    height: auto;
+    width: 20%;
+    max-height: 150px;
+  }
+  
+  
+  .index-content-date {
+    display: inline-flex;
+    width: 70%;
+    margin: 0% 2%;
+    margin-top: 3%;
+    color: black;
+    text-decoration: none;
+    font-size: 0.5em;
+  }
+ 
+  
+  
+  
+  
+  @media only screen and (max-width: 669px) {
+      .index-content {
+        display: none;
+        }
+        .index-title11 {
+            display: inline-flex;
+            width: 70%;
+            margin: 0% 2%;
+            font-weight: bold;
+            color: black;
+            font-size: 0.7em;
+            text-decoration: none;
+            margin-bottom: -50px;
+          }
+        .img-cont1 img {
+          margin: 0% 2%;
+          margin-bottom: 0px;
+          float: left;
+          display: inline-flex;
+          height: auto;
+          width: 20%;
+        
+        }
+        
+  .index-content-date {
+    display: inline-flex;
+    width: 70%;
+    margin: 0% 2%;
+    margin-top: 3%;
+    color: black;
+    text-decoration: none;
+    font-size: 0.5em;
+    margin-left: 26%;
+  }
+        
+        
+        
+    }
+  

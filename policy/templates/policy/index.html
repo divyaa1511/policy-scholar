@@ -1,0 +1,141 @@
+{% load static %} {% block content %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Josefin+Sans:ital,wght@0,100;1,100&family=Merriweather:wght@300&family=Mukta:wght@300&family=Nunito+Sans:wght@300&family=Patrick+Hand&family=Silkscreen&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{% static 'style.css'%}" />
+
+    <title>POLICY SCHOLAR</title>
+  </head>
+  <body>
+    <div class="conthead">
+      <h1>Policy Scholar</h1>
+    </div>
+   
+                                             <!-- navbar -->
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page"  href="{% url 'index' %}">Home </a>
+            </li>
+            <li class="nav-item">
+              <a  class="nav-link active" aria-current="page" href="{% url 'social' %}">Social Policy </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page"  href="{% url 'sciTech' %}">SciTech Policy </a>
+            </li>
+            <li class="nav-item">
+              <a  class="nav-link active" aria-current="page" href="{% url 'environment' %}">Environment Policy </a>
+            </li>
+            <li class="nav-item">
+              <a  class="nav-link active" aria-current="page" href="{% url 'foreign' %}">Foreign Policy </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page"  href="{% url 'economic' %}">Economic Policy </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page"  href="{% url 'other' %}">Other Policies </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page"  href="{% url 'social' %}">Magazine </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page"  href="#">Courses </a>
+           
+            </li>
+            &nsbp&nsbp
+          </ul>
+          
+          {% if user.is_authenticated %}
+          <a class="btn btn-success" href="{% url 'post-new' %}" role="button"> Create new post</a>
+      
+        &nsbp
+        <a class="btn btn-outline-light" href="{% url 'logout' %}" role="button">Logout </a>
+        {%else%}
+        &nsbp&nsbp&nsbp
+        <a class="btn btn-outline-light" href="{% url 'login' %}" role="button">Login</a>
+        {%endif%}
+        </div>
+      </div>
+    </nav>
+    <br><br>
+                                     <!-- navbar ends here -->
+  
+
+
+
+                                    <!-- post section starts -->
+    
+    {% for object in posts %}
+    <article class="content-section1" >
+      <div class="media-body1">
+        <div class="img-cont1">
+          {% if object.image %}
+          <img src="{{object.image.url}}" />
+          {% endif%}
+        </div>
+        <h2>
+          <a href="{% url 'post-detail' object.id %}" class="index-title11"
+            >{{object.title|safe|truncatewords:10|cut:"\n"}}</a>
+            <a href="{% url 'post-detail' object.id %}" class="index-content"
+            >{{object.content|safe|truncatewords:15|cut:"\n"}}</a>
+
+            <a href="{% url 'post-detail' object.id %}" class="index-content-date"> {{object.datepublished}}</a>
+        </h2>
+        
+      </div>
+      <hr>
+     
+</article>
+    <br>
+  
+   
+    {% endfor %} {% endblock %}
+
+
+
+                                  <!-- post section ends here -->
+                                  
+                            <!--  footer  -->
+
+   <footer class="bg-dark text-center text-white" style="background-color:black; position: relative">
+
+  <div class="text-start p-3" style="background-color: black; ">
+   
+    <h3 style="color:white; text-decoration:none;"> &nbsp;&nbsp; Policy Scholar </h3>
+ 
+    <a class="btn btn-link" style="color:white; text-decoration:none;" href="{% url 'index' %}" 
+    >About</a>
+    <a class="btn btn-link" style="color:white; text-decoration:none;" href="{% url 'index' %}" 
+    >Private Policy</a>
+    <a class="btn btn-link" style="color:white; text-decoration:none;" href="{% url 'index' %}" 
+    >Terms & Conditions</a>
+    <a class="btn btn-link" style="color:white; text-decoration:none;" href="{% url 'index' %}" 
+    >Contact</a>
+  
+  </div>
+  <!-- Copyright -->
+</footer>
+                                 <!-- footer ends here   -->
+
+  </body>
+</html>
