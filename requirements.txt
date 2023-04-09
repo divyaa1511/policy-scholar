@@ -9,6 +9,7 @@ django-sekizai==4.0.0
 django-treebeard==4.6.1
 djangocms-admin-style==3.2.3
 filelock==3.11.0
+Pillow==9.5.0
 platformdirs==3.2.0
 sqlparse==0.4.3
 tzdata==2023.3
