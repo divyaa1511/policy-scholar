@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-v5+jj5671!(#!rin$5rw^8z70i2zr)1g_4*(xr56_29@(zewvg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['13.232.38.112', 'localhost', '127.0.0.1','http://43.205.235.218/']
+ALLOWED_HOSTS = ['13.235.241.56','172.31.39.163','https://policyscholar.com','policyscholar.com', 'http://policyscholar.com']
 
 
 # Application definition
@@ -54,7 +54,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'policyscholar.urls'
 
-
+CSRF_TRUSTED_ORIGINS = ['https://policyscholar.com','http://policyscholar.com/']
 
 TEMPLATES = [
     {
