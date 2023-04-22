@@ -33,7 +33,7 @@
         </div> 
         <h2> 
           <a href="{% url 'post-detail' Posts.pk %}" class="index-title111" 
-            >{{Posts.title|safe|truncatewords:15|cut:"\n"}}</a> 
+            >{{Posts.title|safe|truncatewords:7|cut:"\n"}}</a> 
             <a href="{% url 'post-detail' Posts.pk %}" class="index-content" 
             >{{Posts.content|safe|truncatewords:15|cut:"\n"}}</a> 
  
