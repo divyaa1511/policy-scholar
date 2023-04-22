@@ -95,7 +95,7 @@
         </div>
         <h2>
           <a href="{% url 'post-detail' object.id %}" class="index-title11"
-            >{{object.title|safe|truncatewords:7|cut:"\n"}}</a>
+            >{{object.title|safe|truncatewords:15|cut:"\n"}}</a>
             <a href="{% url 'post-detail' object.id %}" class="index-content"
             >{{object.content|safe|truncatewords:15|cut:"\n"}}</a>
 
