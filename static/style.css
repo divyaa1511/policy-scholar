@@ -2,12 +2,13 @@
 
 .conthead {
     display: inline-block;
+    margin-left: 5%;
   }
   
   .conthead h1 {
     display: inline-block;
   
-    margin-left: 4%;
+    margin-left: 1em;
     margin-top: 0.3em;
     font-family: 'Rye', cursive;
    
