@@ -86,26 +86,25 @@
                                     <!-- post section starts -->
     
     {% for object in posts %}
-    <article class="content-section1" >
+     <article class="content-section1">
       <div class="media-body1">
         <div class="img-cont1">
-          {% if object.image %}
-          <img src="{{object.image.url}}" />
-          {% endif%}
+          {% if object.image %} <img src="{{object.image.url}}" /> {% endif%}
         </div>
         <h2>
-          <a href="{% url 'post-detail' object.id %}" class="index-title11"
+          <a href="{% url 'post-detail' object.title %}" class="index-title11"
             >{{object.title|safe|truncatewords:7|cut:"\n"}}</a>
-            <a href="{% url 'post-detail' object.id %}" class="index-content"
+          <a href="{% url 'post-detail' object.title %}" class="index-content"
             >{{object.content|safe|truncatewords:15|cut:"\n"}}</a>
-
-            <a href="{% url 'post-detail' object.id %}" class="index-content-date"> {{object.datepublished}}</a>
+          <a
+            href="{% url 'post-detail' object.title %}"
+            class="index-content-date">
+            {{object.datepublished}}</a
+          >
         </h2>
-        
       </div>
-      <hr>
-     
-</article>
+      <hr />
+    </article>
     <br>
   
    
