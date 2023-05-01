@@ -85,12 +85,11 @@ class PostListView(LoginRequiredMixin,ListView):
     context_object_name = 'posts'
   
     
-def PostDetail(request,pk):
-    post = get_object_or_404(Post,pk=pk)
-    posts = Post.objects.filter(category=post.category).exclude(pk=pk)
+def PostDetail(request,title):
+    post = get_object_or_404(Post,title=title)
+    posts = Post.objects.filter(category=post.category)
     context = {"object":post,'post':post,"posts":posts}
-    return render(request,'policy/post_detail.html',context) 
-
+    return render(request,'policy/post_detail.html',context)
 
 
 class PostCreateView(LoginRequiredMixin,CreateView):
